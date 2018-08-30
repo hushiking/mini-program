@@ -1,0 +1,10 @@
+<template name="tabBar">
+<view class="tabBar">
+  <block wx:for="{{tabBar}}" wx:for-item="item" wx:key="tabBar">
+    <navigator class="tabBar-item" open-type="redirectTo" url="{{item.pagePath}}">
+      <image class="baricon" src='{{item.iconPath}}'></image>
+      <view class="{{item.current == 1 ? 'bartext tabBartext' :'bartext'}}">{{item.text}}</view>
+    </navigator>
+  </block>
+</view>
+</template>
